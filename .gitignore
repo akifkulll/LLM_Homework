@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# large / generated files: models are hosted on the Hugging Face Hub, data is downloaded
+models/
+data/raw/
+.gradio/

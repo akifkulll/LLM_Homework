@@ -1,0 +1,98 @@
+# Turkish offensive-word lexicon for the rule baseline (hand-collected by the author for this homework).
+# One root per line. Matching is done on normalized, ASCII-folded tokens:
+#   word   -> token starts with the root, or is within a small edit distance of it (roots >= 4 chars)
+#   =word  -> exact token match only (short roots that would otherwise hit innocent words)
+#   !word  -> allow-list: tokens starting with this are never flagged (innocent words that collide
+#             with a root after Turkish characters are folded, e.g. sıkıntı -> sikinti)
+# Lines starting with # are comments.
+
+# --- allow-list ---
+!sıkıntı
+!sıkışık
+!sıkışma
+!sıkıştır
+!sıkıl
+!sıkıcı
+!şikayet
+!adil
+!hayvanat
+!eşekarısı
+
+# --- profanity ---
+=amk
+=aq
+=amq
+=mk
+=sg
+=oc
+=oç
+=piç
+=pic
+=göt
+=got
+=sik
+=sikim
+=sike
+amına
+amina
+amcık
+amcik
+ananı
+anani
+anasını
+bacını
+avradını
+orospu
+siktir
+sikerim
+sikeyim
+sikik
+siktim
+sikicem
+sikiş
+yarrak
+yarak
+dalyarak
+taşak
+götveren
+götlek
+kahpe
+kaltak
+sürtük
+fahişe
+pezevenk
+gavat
+ibne
+puşt
+yavşak
+şerefsiz
+haysiyetsiz
+namussuz
+pislik
+# --- insults ---
+gerizekalı
+geri zekalı
+salak
+aptal
+dangalak
+ahmak
+beyinsiz
+embesil
+mankafa
+angut
+öküz
+hıyar
+lavuk
+hödük
+ezik
+çomar
+it oğlu
+köpek
+şerefsizler
+alçak
+adi
+=mal
+hayvan
+eşek
+lanet
+kudurmuş

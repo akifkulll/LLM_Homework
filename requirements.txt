@@ -1,0 +1,12 @@
+# Versions tested on Windows 11 / Python 3.12 (conda env "chatmod")
+numpy==2.5.5
+scikit-learn==1.9.1
+joblib==1.6.0
+torch==2.15.0
+transformers==5.23.0
+onnxruntime==1.32.0
+gradio==6.32.0
+pandas==3.1.1
+huggingface_hub==2.4.0
+# only needed to re-export the ONNX model locally (Colab installs these itself)
+# onnx onnxscript
