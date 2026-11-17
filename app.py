@@ -18,6 +18,11 @@ from src.models import load_models
 from src.normalize import for_classic
 
 MODELS = load_models()
+# Warm-up: ONNX Runtime / PyTorch are slow on the first calls (lazy init, memory allocation).
+# The benchmark warms up too, so live latencies are comparable from the very first message.
+for _m in MODELS.values():
+    for _t in ("ısınma mesajı", "bu bir warm-up cümlesidir, biraz daha uzun bir örnek", "gg"):
+        _m.predict_proba(_t)
 NAME2KEY = {m.name: k for k, m in MODELS.items()}
 DEFAULT = MODELS["bert_int8"].name if "bert_int8" in MODELS else list(NAME2KEY)[-1]
 LEX = Lexicon()
