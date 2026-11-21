@@ -28,12 +28,17 @@ pip install -r requirements.txt
 ## Run the app (single command)
 
 ```bash
-python run.py --repo <hf-user>/berturk-offenseval-tr-onnx
+python run.py
 ```
 
 `run.py` downloads the dataset, trains the small CPU models if they are missing (~3 min),
-downloads the fine-tuned BERTurk ONNX files from the Hugging Face Hub and opens the Gradio app
-at http://127.0.0.1:7860.
+downloads the fine-tuned BERTurk ONNX files (FP32 + INT8, ~530 MB) from the Hugging Face Hub
+([akifkulll/berturk-offenseval-tr-onnx](https://huggingface.co/akifkulll/berturk-offenseval-tr-onnx)),
+warms up all models and opens the Gradio app at http://127.0.0.1:7860.
+The fine-tuned PyTorch checkpoint is at [akifkulll/berturk-offenseval-tr](https://huggingface.co/akifkulll/berturk-offenseval-tr).
+
+Results table (macro-F1, size, latency) on your own CPU: `python -m src.benchmark`
+(the numbers in the presentation are in [`results/results.md`](results/results.md)).
 
 ## Reproduce everything
 

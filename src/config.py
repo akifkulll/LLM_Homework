@@ -22,7 +22,7 @@ BERT_MAX_LEN = 128
 
 # Hugging Face Hub repo that hosts the ONNX BERTurk files (set after uploading).
 # Can also be passed as:  python scripts/download_models.py --repo user/name
-HF_REPO = ""
+HF_REPO = "akifkulll/berturk-offenseval-tr-onnx"
 
 SEED = 42
 LATENCY_BUDGET_MS = 50.0
